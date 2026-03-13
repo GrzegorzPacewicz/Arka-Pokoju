@@ -1,11 +1,11 @@
 # Arka Pokoju – strona fundraisingowa
 
-Strona jałmużny wielkopostnej 2026 dla domu dziecka **Arka Pokoju** w Serednem (Zakarpatie, Ukraina), realizowana przez [Fundację Pogłębiarka](https://poglebiarka.pl).
+Strona jałmużny wielkopostnej 2026 dla domu dziecka **Arka Pokoju** w Serednem (Zakarpatie, Ukraina), realizowana przez Fundację Pogłębiarka.
 
 ## Linki
 
-- **Demo:** [index.html](index.html)
-- **Reportaż TVP Polonia:** [youtube.com/watch?v=eA4fHEb7sOA](https://youtu.be/eA4fHEb7sOA)
+- **Demo:** [grzegorzpacewicz.github.io/Arka-Pokoju](https://grzegorzpacewicz.github.io/Arka-Pokoju/#)
+- **Reportaż TVP Polonia:** youtube.com/watch?v=eA4fHEb7sOA
 
 ## Dane do wpłaty
 
