@@ -1,0 +1,502 @@
+<style>
+.ap-wrap *, .ap-wrap *::before, .ap-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.ap-wrap {
+  --navy:  #05334A;
+  --navy2: #033D52;
+  --gold:  #F7A600;
+  --gold2: #FCB900;
+  --white: #ffffff;
+  --gray:  #f5f5f5;
+  --text:  #222222;
+  --text2: #555555;
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+}
+
+/* ── HERO ── */
+.ap-wrap .hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 60%, #0a4d68 100%);
+  color: var(--white);
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.ap-wrap .hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  opacity: .18;
+}
+.ap-wrap .hero-inner {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  text-align: center;
+}
+.ap-wrap .hero-label {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 25px;
+  margin-bottom: 28px;
+}
+.ap-wrap .hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  color: var(--white);
+}
+.ap-wrap .hero h1 span { color: var(--gold); }
+.ap-wrap .hero p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  opacity: .88;
+  max-width: 580px;
+  margin: 0 auto 36px;
+}
+.ap-wrap .btn-primary {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 16px 42px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 24px rgba(247,166,0,.4);
+}
+.ap-wrap .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(247,166,0,.5); }
+.ap-wrap .btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,.5);
+  margin-left: 14px;
+  transition: border-color .2s;
+}
+.ap-wrap .btn-secondary:hover { border-color: var(--white); }
+
+/* ── STATS BAR ── */
+.ap-wrap .stats {
+  background: var(--gold);
+  padding: 28px 32px;
+}
+.ap-wrap .stats-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  text-align: center;
+}
+.ap-wrap .stat-item strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--navy);
+}
+.ap-wrap .stat-item span {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--navy2);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* ── SECTION SHARED ── */
+.ap-wrap section { padding: 80px 32px; }
+.ap-wrap .container { max-width: 1100px; margin: 0 auto; }
+.ap-wrap .section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: 10px;
+}
+.ap-wrap h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.ap-wrap h2 span { color: var(--gold); }
+
+/* ── STORY ── */
+.ap-wrap .story { background: var(--white); }
+.ap-wrap .story-grid {
+  display: block;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.ap-wrap .story-img {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(5,51,74,.15);
+  aspect-ratio: 4/3;
+  background: #d0e8f2;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; color: #888; font-style: italic;
+}
+.ap-wrap .story-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ap-wrap .story-text p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text2);
+  margin-bottom: 18px;
+}
+.ap-wrap .quote {
+  border-left: 4px solid var(--gold);
+  padding: 14px 20px;
+  background: #fff9ec;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--navy2);
+  margin: 24px 0;
+}
+
+/* ── NEEDS ── */
+.ap-wrap .needs { background: var(--gray); }
+.ap-wrap .needs h2 { text-align: center; margin-bottom: 48px; }
+.ap-wrap .needs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+}
+.ap-wrap .need-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(5,51,74,.07);
+  border-top: 4px solid var(--gold);
+  transition: transform .2s;
+}
+.ap-wrap .need-card:hover { transform: translateY(-4px); }
+.ap-wrap .need-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+.ap-wrap .need-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.ap-wrap .need-card p { font-size: .92rem; line-height: 1.65; color: var(--text2); }
+
+/* ── TESTIMONY ── */
+.ap-wrap .testimony {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+.ap-wrap .testimony blockquote {
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 300;
+  line-height: 1.75;
+  max-width: 780px;
+  margin: 0 auto 28px;
+  font-style: italic;
+  opacity: .92;
+}
+.ap-wrap .testimony cite {
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-style: normal;
+}
+.ap-wrap .testimony .team {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.ap-wrap .team-member { text-align: center; }
+.ap-wrap .avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: #0a4d68;
+  border: 3px solid var(--gold);
+  margin: 0 auto 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .75rem; color: #aaa; font-style: italic;
+}
+.ap-wrap .team-member strong { display: block; font-size: .95rem; color: var(--white); }
+.ap-wrap .team-member span { font-size: .82rem; color: var(--gold2); }
+
+/* ── CTA DONATION ── */
+.ap-wrap .donation {
+  background: linear-gradient(135deg, #fff9ec 0%, #fff3d4 100%);
+  text-align: center;
+}
+.ap-wrap .donation h2 { margin-bottom: 12px; }
+.ap-wrap .donation > .container > p {
+  font-size: 1.05rem;
+  color: var(--text2);
+  max-width: 540px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+.ap-wrap .donation-box {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 40px;
+  max-width: 560px;
+  margin: 0 auto 36px;
+  box-shadow: 0 8px 40px rgba(5,51,74,.12);
+  border: 2px solid var(--gold);
+}
+.ap-wrap .donation-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.ap-wrap .account-number {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  word-break: break-all;
+}
+.ap-wrap .transfer-title {
+  background: var(--gray);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: .95rem;
+  color: var(--navy2);
+  margin-bottom: 28px;
+}
+.ap-wrap .transfer-title strong { color: var(--navy); }
+
+/* ── VIDEO ── */
+.ap-wrap .video-section { background: var(--white); text-align: center; }
+.ap-wrap .video-section h2 { margin-bottom: 12px; }
+.ap-wrap .video-section p { color: var(--text2); margin-bottom: 32px; font-size: 1rem; }
+.ap-wrap .video-wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(5,51,74,.15);
+  aspect-ratio: 16/9;
+  background: var(--navy2);
+  display: flex; align-items: center; justify-content: center;
+}
+.ap-wrap .video-wrapper iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ── FOOTER NOTE ── */
+.ap-wrap .footer-note {
+  background: var(--navy);
+  color: rgba(255,255,255,.65);
+  padding: 32px;
+  text-align: center;
+  font-size: .85rem;
+  line-height: 1.7;
+}
+.ap-wrap .footer-note a { color: var(--gold); text-decoration: none; }
+
+/* ── STICKY CTA (mobile) ── */
+.ap-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #05334A;
+  padding: 14px 20px;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+}
+.ap-sticky-cta .btn-primary {
+  display: inline-block;
+  background: #F7A600;
+  color: #05334A;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 13px 36px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+.ap-wrap .btn-secondary { display: none; }
+  .ap-sticky-cta { display: block; }
+  .ap-wrap .donation-box { padding: 28px 20px; }
+  .ap-wrap section { padding: 56px 20px; }
+  .ap-wrap .team { gap: 24px !important; }
+}
+</style>
+
+<div class="ap-wrap">
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">&#9679; Jałmużna Wielkopostna 2026</div>
+    <h1>Buduj z nami<br><span>Arkę Pokoju</span></h1>
+    <p>Tam, gdzie wojna próbuje siać pustkę,<br>razem możemy zasiewać nadzieję.<br>Dzieci uciekające z linii frontu potrzebują Cię dziś.</p>
+    <a href="#wplac" class="btn-primary">Wpłać darowiznę</a>
+    <a href="#historia" class="btn-secondary">Dowiedz się więcej</a>
+  </div>
+</section>
+
+<!-- ══ STATS BAR ══ -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat-item"><strong>20+</strong><span>dzieci pod opieką</span></div>
+    <div class="stat-item"><strong>od 2014</strong><span>misja trwa</span></div>
+    <div class="stat-item"><strong>Seredne</strong><span>Zakarpatie, Ukraina</span></div>
+    <div class="stat-item"><strong>100%</strong><span>środków dla Arki Pokoju</span></div>
+  </div>
+</div>
+
+<!-- ══ STORY ══ -->
+<section class="story" id="historia">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="section-label">Historia</div>
+        <h2>Dom, który <span>leczy</span></h2>
+        <p>W cieniu karpackich szczytów, na ukraińskim Zakarpaciu, istnieje miejsce, które jest żywym dowodem na to, że miłość potrafi być silniejsza niż&nbsp;wojna.</p>
+        <div class="quote" style="font-style:normal">
+          Przyjeżdżają maluchy, które przestały mówić z przerażenia. Dzieci, które na dźwięk trzaskających drzwi instynktownie chowają się pod&nbsp;stół.
+        </div>
+        <p><strong>Oksana i Wołodia Zawadzcy</strong> stworzyli w Serednem coś więcej niż placówkę opiekuńczą. To wielodzietna rodzina zastępcza, w której na co dzień mieszka ponad dwadzieścioro dzieci. Dla wielu z nich są jedynymi rodzicami, jakich pamiętają.</p>
+        <p>Od czasu pełnoskalowej wojny misja Oksany i Wołodii nabrała dramatycznego wymiaru. W „Arce" ewakuowane dzieci odzyskują to, co wojna próbowała im odebrać – <strong>dzieciństwo</strong>. Dzieje się to poprzez ciszę gór, kontakt ze zwierzętami oraz ramiona Oksany i Wołodii, które są gotowe objąć każde płaczące dziecko.</p>
+        <p>Regularnie przyjmowane są grupy dzieci z okolic przyfrontowych, które choć na chwilę mogą poznać świat bez codziennego widoku śmierci. Podczas pobytu w „Arce Pokoju" mają zapewnioną opiekę psychologiczną, a także zajęcia rekreacyjne i wycieczki górskie.</p>
+        <p><em>To nie jest pomoc „systemowa". To pomoc twarzą w twarz. Serce przy sercu.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEEDS ══ -->
+<section class="needs">
+  <div class="container">
+    <div class="section-label" style="text-align:center">Z czym mierzy się Arka Pokoju?</div>
+    <p style="max-width:720px; margin: 0 auto 32px; text-align:center; font-size:1.2rem; line-height:1.8; color:#555555">Prowadzenie tak dużego domu w realiach wojny to codzienna walka o przetrwanie. Zakarpacie, choć oddalone od bezpośrednich walk, doświadcza przerw w dostawach prądu i kryzysu gospodarczego. Każda zima to pytanie: czy wystarczy drewna na opał? Czy nie zabraknie jedzenia? Czy będą mogli przyjąć kolejną grupę dzieci, które właśnie czekają na ewakuację z piwnic na wschodzie Ukrainy?</p>
+    <h2>Twoje wsparcie pozwoli zapewnić:</h2>
+    <div class="needs-grid">
+      <div class="need-card">
+        <span class="need-icon">⚡</span>
+        <h3>Bezpieczeństwo energetyczne</h3>
+        <p>Prąd to światło, ciepło i możliwość ugotowania posiłku. W czasie blackoutów niezbędne są generatory i systemy podtrzymujące energię.</p>
+      </div>
+      <div class="need-card">
+        <span class="need-icon">🍞</span>
+        <h3>Jedzenie i środki do życia</h3>
+        <p>Ponad dwadzieścioro dzieci każdego dnia siada do stołu. Przyjazd kolejnych grup z frontu oznacza ogromne koszty żywności, odzieży i środków higienicznych.</p>
+      </div>
+      <div class="need-card">
+        <span class="need-icon">🧠</span>
+        <h3>Opieka psychologiczna</h3>
+        <p>Trauma nie znika sama. Dzieci potrzebują specjalistów, by lęk i wspomnienia wojny nie zdominowały ich dorosłego życia.</p>
+      </div>
+      <div class="need-card">
+        <span class="need-icon">🐄</span>
+        <h3>Gospodarstwo i zwierzęta</h3>
+        <p>Zwierzęta to nie tylko mleko czy jajka. To terapia. Pierwszy uśmiech dziecka, które od miesięcy żyło w&nbsp;strachu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONY ══ -->
+<section class="testimony">
+  <div class="container">
+    <div class="section-label" style="color:#F7A600">Dlaczego ufamy tej inicjatywie</div>
+    <h2 style="color:#ffffff; margin-bottom:32px">To nie jest pomoc „systemowa".<br><span>To pomoc twarzą w twarz.</span></h2>
+    <blockquote>
+      To miejsce nie jest dla nas anonimowe. Do „Arki Pokoju" od kilku lat regularnie jeżdżą członkowie społeczności Fundacji Pogłębiarka – Maciej, dyrektor finansowy fundacji, oraz Edyta, wiceprezes. Znają Oksanę i Wołodię, znają dzieci, widzieli codzienność tego domu z bliska. Są z nimi w stałym kontakcie i na bieżąco wiedzą, z czym mierzy się to miejsce. Dlatego mówimy z taką pewnością: „Arka Pokoju" to przestrzeń prawdziwego dobra, które naprawdę zmienia życie dzieci. Właśnie dlatego chcemy ją wspierać. Ty również możesz stać się częścią tej historii.
+    </blockquote>
+    <cite>Fundacja Pogłębiarka</cite>
+    <div class="team">
+      <div class="team-member">
+        <div class="avatar">foto</div>
+        <strong>Maciej</strong>
+        <span>Dyrektor finansowy</span>
+      </div>
+      <div class="team-member">
+        <div class="avatar">foto</div>
+        <strong>Edyta</strong>
+        <span>Wiceprezes fundacji</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA DONATION ══ -->
+<section class="donation" id="wplac">
+  <div class="container">
+    <div class="section-label">Działaj teraz</div>
+    <h2>Wpłać darowiznę<br>dla <span>Arki Pokoju</span></h2>
+    <p>Każda kwota ma znaczenie. To, co dla Ciebie jest małe, dla kogoś może stać się początkiem bezpieczeństwa i nadziei.</p>
+
+    <div class="donation-box">
+      <h3>Numer konta</h3>
+      <div class="account-number">97 1870 1045 2078 1068 8519 0009</div>
+      <div class="transfer-title">Tytuł przelewu: <strong>Darowizna – Dom dziecka Arka Pokoju</strong></div>
+    </div>
+
+    <p style="max-width:560px; margin: 24px auto 0; font-size:.95rem; line-height:1.7; color:#555555; text-align:center">Udostępnij tę zbiórkę na swoich mediach społecznościowych linkując tę stronę. Twoje jedno kliknięcie może sprawić, że zbiórka dotrze do ludzi, którzy właśnie czekają na okazję, by zrobić coś dobrego.</p>
+  </div>
+</section>
+
+<!-- ══ CLOSING ══ -->
+<section style="background:#05334A; color:#ffffff; text-align:center; padding:80px 32px;">
+  <div class="container" style="max-width:720px">
+    <p style="font-size:clamp(1rem,2.2vw,1.2rem); line-height:1.85; opacity:.9; margin-bottom:28px">W Wielkim Poście szukamy sposobów, by nasze serce stało się bardziej wrażliwe. Jałmużna wielkopostna daje nam taką możliwość – bo więcej jest radości w dawaniu niż w braniu. Czasem naprawdę niewielki gest, drobna wpłata, decyzja podjęta z miłości, potrafi realnie zmienić czyjeś życie. To, co dla nas jest małe, dla kogoś może stać się początkiem poczucia bezpieczeństwa, nadziei i nowego&nbsp;jutra.</p>
+    <p style="font-size:clamp(1.1rem,2.5vw,1.4rem); font-weight:700; color:#F7A600">Buduj z nami Arkę Pokoju.<br><span style="font-weight:400; font-size:.9em; color:rgba(255,255,255,.8)">Tam, gdzie wojna próbuje siać pustkę, razem możemy zasiewać nadzieję.</span></p>
+  </div>
+</section>
+
+<!-- ══ VIDEO ══ -->
+<section class="video-section">
+  <div class="container">
+    <div class="section-label">Reportaż TVP Polonia</div>
+    <h2>Zobacz Arkę Pokoju <span>na własne oczy</span></h2>
+    <p>Emisja reportażu w TVP Polonia – poznaj historię dzieci i rodziny Zawadzkich.</p>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/eA4fHEb7sOA" allowfullscreen loading="lazy" title="Reportaż o Arce Pokoju – TVP Polonia"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER NOTE ══ -->
+<div class="footer-note">
+  <p>Akcja odbywa się w ramach proponowanej przez <a href="https://poglebiarka.pl">Fundację Pogłębiarka</a> jałmużny wielkopostnej.<br>
+  Nie jest to darowizna na działalność Pogłębiarki. <strong style="color:rgba(255,255,255,.85)">Całość zebranych środków zostanie przekazana na wsparcie domu dziecka „Arka Pokoju".</strong></p>
+</div>
+
+</div><!-- /.ap-wrap -->
+
+<!-- ══ STICKY CTA (mobile) ══ -->
+<div class="ap-sticky-cta">
+  <a href="#wplac" class="btn-primary">Wpłać darowiznę ↑</a>
+</div>
