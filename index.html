@@ -149,10 +149,9 @@
   /* ── STORY ── */
   .story { background: var(--white); }
   .story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    display: block;
+    max-width: 780px;
+    margin: 0 auto;
   }
   .story-img {
     border-radius: 12px;
@@ -379,7 +378,6 @@
   .sticky-cta .btn-primary { font-size: 1rem; padding: 13px 36px; }
 
   @media (max-width: 768px) {
-    .story-grid { grid-template-columns: 1fr; gap: 32px; }
     .btn-secondary { display: none; }
     .sticky-cta { display: block; }
     .donation-box { padding: 28px 20px; }
@@ -415,10 +413,6 @@
 <section class="story" id="historia">
   <div class="container">
     <div class="story-grid">
-      <div class="story-img">
-        <!-- ZDJĘCIE: dzieci / Arka Pokoju / Seredne -->
-        <span>[ zdjęcie: dzieci w Arce Pokoju ]</span>
-      </div>
       <div class="story-text">
         <div class="section-label">Historia</div>
         <h2>Dom, który <span>leczy</span></h2>
@@ -439,8 +433,8 @@
 <section class="needs">
   <div class="container">
     <div class="section-label" style="text-align:center">Z czym mierzy się Arka Pokoju?</div>
+    <p style="max-width:720px; margin: 0 auto 32px; text-align:center; font-size:1.2rem; line-height:1.8; color:var(--text2)">Prowadzenie tak dużego domu w realiach wojny to codzienna walka o przetrwanie. Zakarpacie, choć oddalone od bezpośrednich walk, doświadcza przerw w dostawach prądu i kryzysu gospodarczego. Każda zima to pytanie: czy wystarczy drewna na opał? Czy nie zabraknie jedzenia? Czy będą mogli przyjąć kolejną grupę dzieci, które właśnie czekają na ewakuację z piwnic na wschodzie Ukrainy?</p>
     <h2>Twoje wsparcie pozwoli zapewnić:</h2>
-    <p style="max-width:720px; margin: 0 auto 48px; text-align:center; font-size:1.05rem; line-height:1.8; color:var(--text2)">Prowadzenie tak dużego domu w realiach wojny to codzienna walka o przetrwanie. Zakarpacie, choć oddalone od bezpośrednich walk, doświadcza przerw w dostawach prądu i kryzysu gospodarczego. Każda zima to pytanie: czy wystarczy drewna na opał? Czy nie zabraknie jedzenia? Czy będą mogli przyjąć kolejną grupę dzieci, które właśnie czekają na ewakuację z piwnic na wschodzie Ukrainy?</p>
     <div class="needs-grid">
       <div class="need-card">
         <span class="need-icon">⚡</span>
